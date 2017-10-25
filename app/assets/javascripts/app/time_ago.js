@@ -1,4 +1,7 @@
 //= require timeago
+//= require thredded/dependencies/timeago
+//= require timeago/locales/uk
+//= require thredded
 (function() {
   window.App.onPageLoad(function() {
     if (!window.App.isAppPage()) {
