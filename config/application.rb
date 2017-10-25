@@ -27,6 +27,7 @@ module Forum
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-    config.i18n.available_locales = %w(en)
+    config.i18n.available_locales = %w(uk en)
+    config.i18n.default_locale = :uk
   end
 end

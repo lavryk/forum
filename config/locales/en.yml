@@ -2,7 +2,7 @@ en:
   brand:
     name: Forum
   common:
-    time_ago: "%{time} ago"
+    time_ago: "%{time} тому"
   nav:
     edit_my_account: Edit my account
     forums: :thredded.nav.all_messageboards
