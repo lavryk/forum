@@ -1,6 +1,6 @@
 # README
 
-<img src="https://travis-ci.org/lavryk/forum.svg?branch=master" alt="build:started">
+<img src="https://travis-ci.org/lavryk/forum.svg?branch=master" >
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
