@@ -16,8 +16,6 @@ defaults: &defaults
   pool: <%= pool_size %>
   host: <%= db_host %>
   port: <%= db_port %>
-  username: <%= ENV.fetch('DB_USERNAME', 'forum_dev').inspect %>
-  password: <%= ENV.fetch('DB_PASSWORD', "forum").inspect %>
   encoding: utf8
 
 development:
@@ -27,11 +25,13 @@ development:
 test:
   <<: *defaults
   database: forum_test
-
+  username: postgres
 
 production:
   <<: *defaults
   encoding: utf8
   min_messages: WARNING
   url: <%= ENV['DATABASE_URL'].inspect if ENV['DATABASE_URL'] %>
+  username: <%= ENV.fetch('DB_USERNAME', 'forum_dev').inspect %>
+  password: <%= ENV.fetch('DB_PASSWORD', "forum").inspect %>
   database: <%= 'forum_prod' unless ENV['DATABASE_URL'] %>
