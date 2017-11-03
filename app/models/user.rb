@@ -18,13 +18,12 @@ class User < ApplicationRecord
   # Makes the display_name unique by appending a number to it if necessary.
   # "Gleb" => Gleb 1"
   def uniq_display_name!
-    if display_name
+    return unless display_name
     new_display_name = display_name
     i = 0
     while User.exists?(display_name: new_display_name)
       new_display_name = "#{display_name} #{i += 1}"
     end
     self.display_name = new_display_name
-    end
-    end
+  end
 end
