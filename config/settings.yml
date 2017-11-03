@@ -1,3 +1,4 @@
-<% hostname = ENV['APP_HOST'] || 'b.m32.site' %>
+#ENV['APP_HOST'] ||
+<% hostname = 'm32b.herokuapp.com' %>
 hostname: <%= hostname.inspect %>
 email_sender: <%= (ENV['SMTP_USER'] || "no-reply@#{hostname}").inspect %>
